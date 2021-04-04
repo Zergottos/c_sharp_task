@@ -1,0 +1,16 @@
+C:\Projects\Console Application C#\bin\Debug\net5.0\Console Application C#.exe
+C:\Projects\Console Application C#\bin\Debug\net5.0\Console Application C#.deps.json
+C:\Projects\Console Application C#\bin\Debug\net5.0\Console Application C#.runtimeconfig.json
+C:\Projects\Console Application C#\bin\Debug\net5.0\Console Application C#.runtimeconfig.dev.json
+C:\Projects\Console Application C#\bin\Debug\net5.0\Console Application C#.dll
+C:\Projects\Console Application C#\bin\Debug\net5.0\ref\Console Application C#.dll
+C:\Projects\Console Application C#\bin\Debug\net5.0\Console Application C#.pdb
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.csprojAssemblyReference.cache
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.AssemblyInfoInputs.cache
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.AssemblyInfo.cs
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.csproj.CoreCompileInputs.cache
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.dll
+C:\Projects\Console Application C#\obj\Debug\net5.0\ref\Console Application C#.dll
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.pdb
+C:\Projects\Console Application C#\obj\Debug\net5.0\Console Application C#.genruntimeconfig.cache
