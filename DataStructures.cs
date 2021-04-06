@@ -49,7 +49,7 @@ namespace Console_Application_C_ {
     public class CountryEntity {
         public string country;
         public float avg;
-        public int median;
+        public float median;
         public int max;
         public string maxPerson;
         public int min;
@@ -59,7 +59,7 @@ namespace Console_Application_C_ {
         public CountryEntity(
             string _country,
             float _avg, 
-            int _med, 
+            float _med, 
             int _max, 
             string _maxP, 
             int _min, 

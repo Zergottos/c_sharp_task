@@ -80,19 +80,18 @@ namespace Console_Application_C_ {
         }
         private static CountryEntity reduce(List<Entity> entries) {
             string country = "";
-            int medainIdx = entries.Count % 2 == 0 ? entries.Count / 2 : (entries.Count+1) / 2;
-            int median = 0;
+            float median = 0;
             int count = 0;
-            int total = 0;
+            float total = 0;
             int max = 0;
             int min = -1;
             string minP = "";
             string maxP = "";
+            
             foreach(var e in entries) {
                 // The first go initilize our statistic with meanigful information 
                 if(min == -1) {
                     min = e.score;
-                    median = e.score;
                     maxP = e.fName + " " + e.lName;
                     minP = e.fName + " " + e.lName;
                     country = e.country;
@@ -109,10 +108,12 @@ namespace Console_Application_C_ {
 
                 total += e.score;
                 count++;
-
-                if(count == medainIdx) median = e.score;
             }
 
+            int medainIdx =  entries.Count / 2;
+            int secondMedidx = entries.Count % 2 == 0 ? 1 : 0;
+            median = ((float)entries[medainIdx-1].score + (float)entries[medainIdx+secondMedidx-1].score) / 2;
+            
             float avg = total/count;
 
             return new CountryEntity(country, avg, median, max, maxP, min, minP, count);
