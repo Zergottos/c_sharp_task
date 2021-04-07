@@ -31,11 +31,8 @@ namespace Console_Application_C_
                 sender = Console.ReadLine();
             }
             
-            string password = "";
-            while(password == "") {
-                Console.WriteLine("Enter paasword: ");
-                password = Console.ReadLine();
-            }
+            Console.WriteLine("Enter your password and press Enter: ");
+            string password = writePassWithStars();
 
             Console.WriteLine("Enter reciever e-mail: ");
             string reciever = "";
@@ -43,7 +40,7 @@ namespace Console_Application_C_
                 reciever = Console.ReadLine();
             }
 
-            Console.WriteLine($"File: {file}, credentials user:{sender} password:*******, reciever: {reciever}");
+            Console.WriteLine($"File: {file}, credentials user:{sender}, reciever: {reciever}");
 
             try {
                 var smtpClient = new SmtpClient("smtp.abv.bg")
@@ -74,6 +71,30 @@ namespace Console_Application_C_
             }
             
             while(Console.ReadKey().Key != ConsoleKey.Escape) {}
+        }
+
+        public static string writePassWithStars() {
+            string password = "";
+            ConsoleKeyInfo key = Console.ReadKey(true);
+            while (key.Key != ConsoleKey.Enter) {
+                if(key.Key == ConsoleKey.Backspace) {
+                    if(password.Length > 0) {
+                        password = password.Remove(password.Length - 1, 1);
+                        Console.Write("\b \b");
+                    }
+                } else {
+
+                    password = password + key.KeyChar;
+                    
+                    Console.Write("*");
+                }
+
+                key = Console.ReadKey(true);
+            };
+
+            Console.WriteLine();
+
+            return password;
         }
     }
 }
